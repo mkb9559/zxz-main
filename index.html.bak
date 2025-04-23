@@ -348,35 +348,25 @@
                         style="font-family: Consolas;font-size: 30px">Talks</span></h2>
                     <br>
                     <ul>
-                      <li><span style="font-family: Georgia;font-size: 20px;">"Linear
-                          Formation Control of Multi-agent Systems", at The 13th
-                          Forum of Young Scientists of China Command and Control
-                          Society, Zhuhai, China</span><span style="font-family: Georgia;font-size: 20px;"><span
-                            style="font-size: 20px; font-family: Georgia;">, </span>April
-                          2025.</span><br>
-                        <span style="font-family: Georgia;font-size: 20px;"></span></li>
-                    </ul>
-                    <br>
-                    <ul>
                       <li><span style="font-family: Georgia;font-size: 20px;">"Research
                           on Motion Control of Swarm </span><span style="font-family: Georgia;font-size: 20px;"><span
                             style="font-family: Georgia;font-size: 20px;">Robotics</span>",
                           at The 8th Graduate Forum of Beijing Institute of
                           Technology, Beijing Institute of Technology, </span><span
                           style="font-family: Georgia;font-size: 20px;"><span style="font-size: 20px; font-family: Georgia;">
-                            Beijing, China, </span>November 2024.</span></li>
+                            Beijing, </span>November 2024.</span></li>
                     </ul>
                     <p><br>
                     </p>
                     <ul>
                     </ul>
                     <ul>
-                      <li> <span style="font-family: Georgia;font-size: 20px;">"Linear
-                          Formation Control for Swarm Robotics", at
-                          International Doctoral Academic Forum on Mechanics and
+                      <li><span style="font-family: Georgia;font-size: 20px;">"Linear
+                          Formation Control of Swarm Robotics", at International
+                          Doctoral Academic Forum on Mechanics and
                           Interdisciplinary Subjects, Peking University, </span><span
                           style="font-family: Georgia;font-size: 20px;"><span style="font-size: 20px; font-family: Georgia;">
-                            Beijing, </span>China, October 2024.</span></li>
+                            Beijing, </span>October 2024.</span></li>
                     </ul>
                     <p><br>
                     </p>
@@ -385,7 +375,7 @@
                           Distributed Algorithm for Solving A Time-Varying
                           Linear Equation", at AI Future-The 5th Academic Forum
                           on Artificial Intelligence in Beijing Universities,
-                          Beijing, China, April 2023.</span></li>
+                          Beijing, April 2023.</span></li>
                     </ul>
                     <p><br>
                     </p>
@@ -427,11 +417,10 @@
                         style="font-family: Georgia;">Journal Reviewer: IEEE
                         Transactions on Automatic Control, IEEE Transactions on
                         Automation Science and Engineering, IEEE Transactions on
-                        Fuzzy Systems, IEEE Transactions on Control Systems
-                        Technology, International Journal of Robust and
-                        Nonlinear Control, IEEE Transactions on Signal and
-                        Information Processing over Networks, Journal of
-                        Advanced Computational Intelligence and Intelligent
+                        Control Systems Technology, International Journal of
+                        Robust and Nonlinear Control, IEEE Transactions on
+                        Signal and Information Processing over Networks, Journal
+                        of Advanced Computational Intelligence and Intelligent
                         Informatics, Autonomous Intelligent Systems.</span></p>
                     <p></p>
                     <p style="text-align:right;font-size:small;"></p>
