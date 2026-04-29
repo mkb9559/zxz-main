@@ -133,3 +133,535 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --page-bg: #f5f7fb;
+  --panel-bg: rgba(255, 255, 255, 0.92);
+  --text: #1f2937;
+  --muted: #5f6b7a;
+  --accent: #0f766e;
+  --accent-strong: #0b5f59;
+  --accent-soft: #e7f5f3;
+  --line: #dde5ef;
+  --shadow: 0 18px 50px rgba(31, 41, 55, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    linear-gradient(180deg, rgba(15, 118, 110, 0.08) 0, rgba(245, 247, 251, 0) 320px),
+    var(--page-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a,
+span,
+li {
+  font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+}
+
+body > table {
+  width: min(1120px, calc(100% - 48px)) !important;
+  max-width: 1120px !important;
+  margin: 34px auto 56px !important;
+}
+
+body > table > tbody > tr > td {
+  padding: 0 !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type {
+  width: 100% !important;
+  height: auto !important;
+  padding: 34px 38px !important;
+  border: 1px solid rgba(221, 229, 239, 0.9) !important;
+  border-radius: 18px !important;
+  background: var(--panel-bg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+body > table > tbody > tr > td > table:first-of-type td:first-child {
+  width: 70% !important;
+  padding: 0 34px 0 0 !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type td:last-child {
+  width: 30% !important;
+  text-align: right;
+}
+
+.name {
+  padding-top: 0;
+  margin-bottom: 16px;
+}
+
+.name span {
+  color: #101827;
+  font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-size: clamp(34px, 5vw, 54px) !important;
+  font-weight: 700;
+  line-height: 1;
+}
+
+p {
+  color: var(--text) !important;
+  line-height: 1.7 !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type p:not(.name) {
+  margin: 0 0 14px !important;
+  color: var(--muted) !important;
+  font-size: 17px !important;
+  text-align: left !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type p:not(.name) span {
+  font-size: inherit !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type p[style*="text-align:center"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px !important;
+  text-align: center !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type p[style*="text-align:center"] span {
+  display: contents;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+a:focus,
+a:hover {
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+body > table > tbody > tr > td > table:first-of-type a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 5px 12px;
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 15px !important;
+}
+
+body > table > tbody > tr > td > table:first-of-type a:hover {
+  background: #d7eeeb;
+  box-shadow: 0 8px 22px rgba(15, 118, 110, 0.14);
+}
+
+body > table > tbody > tr > td > table:first-of-type img {
+  width: min(260px, 100%) !important;
+  height: auto !important;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(31, 41, 55, 0.18);
+}
+
+h2 {
+  position: relative;
+  margin: 46px 0 20px !important;
+  padding-bottom: 10px;
+  color: #101827 !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+h2 span {
+  font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+}
+
+h2 + p {
+  display: none;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) {
+  width: 100% !important;
+  height: auto !important;
+  border-spacing: 0 16px !important;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr {
+  border-radius: 14px;
+  background: var(--panel-bg);
+  box-shadow: 0 10px 30px rgba(31, 41, 55, 0.06);
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td {
+  padding: 20px !important;
+  border-top: 1px solid rgba(221, 229, 239, 0.85);
+  border-bottom: 1px solid rgba(221, 229, 239, 0.85);
+  vertical-align: middle !important;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td:first-child {
+  width: 34% !important;
+  border-left: 1px solid rgba(221, 229, 239, 0.85);
+  border-radius: 14px 0 0 14px;
+  text-align: center !important;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td:last-child {
+  width: 66% !important;
+  border-right: 1px solid rgba(221, 229, 239, 0.85);
+  border-radius: 0 14px 14px 0;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) > td {
+  width: 100% !important;
+  border: 1px solid rgba(221, 229, 239, 0.85);
+  border-radius: 14px;
+  text-align: left !important;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) > td > br,
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) > td > p:not([style*="font-size"]) {
+  display: none;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) img {
+  width: 100% !important;
+  max-width: 360px !important;
+  height: auto !important;
+  max-height: 280px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #f8fafc;
+  box-shadow: 0 12px 28px rgba(31, 41, 55, 0.12);
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) p,
+body > table > tbody > tr > td > table:not(:first-of-type) span,
+body > table > tbody > tr > td > table:not(:first-of-type) li {
+  font-size: 16px !important;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) p {
+  margin: 0 0 10px !important;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) p:first-child {
+  color: var(--muted) !important;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) p:first-child b:first-child {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #111827;
+  font-size: 19px !important;
+  line-height: 1.35;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) p:first-child a {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: #1d4ed8;
+  font-size: 14px !important;
+}
+
+.brief-intro {
+  margin-top: 10px !important;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted) !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  text-align: left !important;
+}
+
+.brief-intro b {
+  color: var(--accent-strong);
+}
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+
+li {
+  margin: 0 0 10px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) ul {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) li {
+  position: relative;
+  margin: 0;
+  padding: 12px 16px 12px 34px;
+  border: 1px solid rgba(221, 229, 239, 0.9);
+  border-radius: 10px;
+  background: #f8fafc;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) li::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) p {
+  margin: 14px 0 0 !important;
+  color: var(--muted) !important;
+  text-align: left !important;
+}
+
+.simple-section > tbody > tr > td {
+  text-align: left !important;
+}
+
+.simple-section h2 {
+  margin-top: 34px !important;
+}
+
+.talks-section ul,
+.service-section ul {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.talks-section ul {
+  grid-template-columns: 1fr;
+}
+
+.service-section ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-section .journal-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(280px, 1fr)) !important;
+  gap: 10px 12px !important;
+  margin-top: 12px !important;
+}
+
+.talks-section li,
+.service-section li {
+  position: relative;
+  margin: 0 !important;
+  padding: 12px 16px 12px 34px !important;
+  border: 1px solid rgba(221, 229, 239, 0.9);
+  border-radius: 10px;
+  background: #f8fafc;
+  color: var(--text);
+  line-height: 1.55 !important;
+  text-align: left !important;
+}
+
+.service-section .journal-list li {
+  min-height: 48px;
+}
+
+.talks-section li::before,
+.service-section li::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 16px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.talks-section p:not([style*="text-align:right"]),
+.talks-section br,
+.service-section br {
+  display: none;
+}
+
+.service-section p {
+  margin: 14px 0 0 !important;
+  padding: 14px 16px !important;
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--text) !important;
+  line-height: 1.6 !important;
+  text-align: left !important;
+}
+
+.service-section > tbody > tr > td > p,
+.service-section > tbody > tr > td > span {
+  display: none !important;
+}
+
+.service-card {
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.service-heading {
+  margin: 18px 0 0;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.service-section p:empty,
+  .service-section p[style*="text-align:right"] {
+  display: none;
+}
+
+.service-section p span {
+  color: inherit !important;
+}
+
+.service-section p:nth-of-type(2) {
+  margin-top: 16px !important;
+  padding: 0 !important;
+  border: 0;
+  background: transparent;
+  color: #111827 !important;
+  font-weight: 700;
+}
+
+tr[align="right"] td,
+td[style*="Last Update"] {
+  color: var(--muted);
+  font-size: 13px !important;
+}
+
+@media (max-width: 760px) {
+  body > table {
+    width: min(100% - 28px, 1120px) !important;
+    margin-top: 18px !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type,
+  body > table > tbody > tr > td > table:first-of-type > tbody,
+  body > table > tbody > tr > td > table:first-of-type > tbody > tr,
+  body > table > tbody > tr > td > table:first-of-type > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type {
+    padding: 24px !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type td:first-child {
+    padding: 0 !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type td:last-child {
+    margin-top: 22px;
+    text-align: center;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type),
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody,
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr,
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr {
+    margin-bottom: 16px;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td,
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td:first-child,
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td:last-child {
+    border: 1px solid rgba(221, 229, 239, 0.85);
+    border-radius: 0;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td:first-child {
+    border-radius: 14px 14px 0 0;
+    border-bottom: 0;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td:last-child {
+    border-radius: 0 0 14px 14px;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) > td {
+    border: 1px solid rgba(221, 229, 239, 0.85);
+    border-radius: 14px;
+  }
+
+  .service-section ul {
+    grid-template-columns: 1fr;
+  }
+
+  .service-section .journal-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  h2 {
+    margin-top: 34px !important;
+    font-size: 24px !important;
+  }
+}
