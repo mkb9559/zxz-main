@@ -247,6 +247,17 @@ body > table > tbody > tr > td > table:first-of-type p[style*="text-align:center
   display: contents;
 }
 
+.contact-links {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-links span {
+  display: contents;
+}
+
 a {
   color: var(--accent);
   font-weight: 700;
@@ -593,9 +604,13 @@ td[style*="Last Update"] {
 }
 
 @media (max-width: 760px) {
+  body {
+    background: var(--page-bg);
+  }
+
   body > table {
-    width: min(100% - 28px, 1120px) !important;
-    margin-top: 18px !important;
+    width: calc(100% - 8px) !important;
+    margin: 6px auto 28px !important;
   }
 
   body > table > tbody > tr > td > table:first-of-type,
@@ -607,7 +622,8 @@ td[style*="Last Update"] {
   }
 
   body > table > tbody > tr > td > table:first-of-type {
-    padding: 24px !important;
+    padding: 16px !important;
+    border-radius: 14px !important;
   }
 
   body > table > tbody > tr > td > table:first-of-type td:first-child {
@@ -617,6 +633,41 @@ td[style*="Last Update"] {
   body > table > tbody > tr > td > table:first-of-type td:last-child {
     margin-top: 22px;
     text-align: center;
+  }
+
+  .name {
+    margin-bottom: 12px;
+    text-align: center !important;
+  }
+
+  .name span {
+    font-size: 34px !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type p:not(.name) {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    text-align: left !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type img {
+    width: min(210px, 72vw) !important;
+    margin: 0 auto;
+  }
+
+  .contact-links {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type .contact-links a {
+    justify-content: center;
+    width: 100%;
+    min-height: 38px;
+    padding: 7px 10px;
+    font-size: 14px !important;
   }
 
   body > table > tbody > tr > td > table:not(:first-of-type),
@@ -641,10 +692,32 @@ td[style*="Last Update"] {
   body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td:first-child {
     border-radius: 14px 14px 0 0;
     border-bottom: 0;
+    padding: 12px !important;
   }
 
   body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr > td:last-child {
     border-radius: 0 0 14px 14px;
+    padding: 14px !important;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) img {
+    max-width: 100% !important;
+    max-height: 220px;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) p,
+  body > table > tbody > tr > td > table:not(:first-of-type) span,
+  body > table > tbody > tr > td > table:not(:first-of-type) li {
+    font-size: 15px !important;
+  }
+
+  body > table > tbody > tr > td > table:not(:first-of-type) p:first-child b:first-child {
+    font-size: 17px !important;
+  }
+
+  .brief-intro {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
   }
 
   body > table > tbody > tr > td > table:not(:first-of-type) > tbody > tr:not(:has(> td:nth-child(2))) > td {
@@ -663,5 +736,27 @@ td[style*="Last Update"] {
   h2 {
     margin-top: 34px !important;
     font-size: 24px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  body > table {
+    width: calc(100% - 6px) !important;
+  }
+
+  body > table > tbody > tr > td > table:first-of-type {
+    padding: 14px !important;
+  }
+
+  .name span {
+    font-size: 30px !important;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 22px !important;
   }
 }
